@@ -30,7 +30,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
-    "eslint": "^6.5.1",
+    "eslint": "^10.9.1",
     "eslint-loader": "^3.0.2",
     "eslint-plugin-react": "^7.16.0",
     "file-loader": "^4.2.0",
@@ -51,6 +51,6 @@
     "morgan": "^1.9.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "swagger-ui-react": "^3.24.0"
+    "swagger-ui-react": "^5.32.14"
   }
 }
