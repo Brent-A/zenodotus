@@ -1,0 +1,34 @@
+# docker-compose.yml
+# Defines the **development** docker deployment for Zenodotus
+version: "3"
+services:
+  # app is the node.js front-end for Zenodotus
+  app:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://user:pass@postgres:5432/db
+      NODE_ENV: development
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    command: npm start
+
+    # The local directory is mounted as a volume and not copied
+    # in to the docker image. This allows on-the-fly edits of the
+    # site content during development, and the development
+
+    volumes:
+      - .:/app/
+      - /app/node_modules
+
+  # postgres is the persisted database backend
+  postgres:
+    image: postgres:10.4
+    ports:
+      - "35432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: db
