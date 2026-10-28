@@ -51,6 +51,6 @@
     "morgan": "^1.9.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "swagger-ui-react": "^3.24.0"
+    "swagger-ui-react": "^5.34.0"
   }
 }
